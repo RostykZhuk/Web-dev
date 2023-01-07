@@ -1,26 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// return single element
-// div/section article/React.Fragment
-// use camelCase for html attribute
-// className instead class
-// close every element
-// formatting
+// Nested Component, React Tools
 
 function Greeting() {
   return (
-    <div className=''>
-      <h1>Hello world</h1>
-      <ul>
-        <li>
-          <a href='#'>Hello Rostyk</a>
-        </li>
-        <img src='' alt='' />
-        <input type='text' />
-      </ul>
+    <div>
+      <Person />
+      <Message />
     </div>
   );
 }
+
+const Person = () => <h2>Rostyk Zhuk</h2>;
+const Message = () => <p>This is my react app</p>;
 
 ReactDOM.render(<Greeting />, document.getElementById('root'));
