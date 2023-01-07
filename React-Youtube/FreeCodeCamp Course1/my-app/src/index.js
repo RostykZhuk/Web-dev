@@ -1,23 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// stateless functional component
-// always return jsx
+// return single element
+// div/section article/React.Fragment
+// use camelCase for html attribute
+// className instead class
+// close every element
+// formatting
 
-// function Greeting() {
-//   return (
-//     <div>
-//       <h1>Hello world</h1>
-//     </div>
-//   );
-// }
-// the same
-const Greeting = () => {
-  return React.createElement(
-    'div',
-    {},
-    React.createElement('h1', {}, 'hello world')
+function Greeting() {
+  return (
+    <div className=''>
+      <h1>Hello world</h1>
+      <ul>
+        <li>
+          <a href='#'>Hello Rostyk</a>
+        </li>
+        <img src='' alt='' />
+        <input type='text' />
+      </ul>
+    </div>
   );
-};
+}
 
 ReactDOM.render(<Greeting />, document.getElementById('root'));
