@@ -36,7 +36,11 @@ const Image = () => (
 );
 
 const Title = () => <h1>The Hunger Games</h1>;
-const Author = () => <h4>Suzanne Collins</h4>;
+const Author = () => (
+  <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
+    Suzanne Collins
+  </h4>
+);
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 root.render(<BookList />);
