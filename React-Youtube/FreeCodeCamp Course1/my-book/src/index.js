@@ -14,17 +14,26 @@ const books = [
     title: 'Harry Potter and the Order of the Phoenix',
     author: ' J.K. Rowling, Mary GrandPré',
   },
+  {
+    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320399351l/1885.jpg',
+    title: 'Pride and Prejudice',
+    author: ' Jane Austen, Anna Quindlen',
+  },
 ];
-const names = ['john', 'Peter', 'Susan'];
-const newName = names.map((name) => {
-  return <h1>{name}</h1>;
-});
+
 function BookList() {
-  return <section className='booklist'>{newName}</section>;
+  return (
+    <section className='booklist'>
+      {books.map((book) => {
+        const { img, title, author } = book;
+        return <Book book={book}></Book>;
+      })}
+    </section>
+  );
 }
 
-const Book = ({ img, title, author }) => {
-  // const { img, title, author } = props;
+const Book = (props) => {
+  const { img, title, author } = props.book;
   return (
     <article className='book'>
       <img src={img} alt='' />
