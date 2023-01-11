@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutor/1-useState/final/3-useState-array';
+import Setup from './tutor/2-useEffect/setup/1-useEffect-basics';
 function App() {
   return (
     <div className='container'>
