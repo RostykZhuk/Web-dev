@@ -1,8 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+function countInitial() {
+  console.log('run function');
+  return 4;
+}
 
 function App() {
-  return <></>;
+  const [count, setCount] = useState(() => countInitial());
+  const decrementCount = () => {
+    setCount((prevCount) => prevCount - 1);
+  };
+  const incrementCount = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+  return (
+    <>
+      <button onClick={decrementCount}>-</button>
+      <span>{count}</span>
+      <button onClick={incrementCount}>+</button>
+    </>
+  );
 }
 
 export default App;
