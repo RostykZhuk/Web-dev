@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutor/2-useEffect/setup/3-useEffect-fetch-data';
+import Setup from './tutor/3-conditional-rendering/setup/1-multiple-returns';
 function App() {
   return (
     <div className='container'>
