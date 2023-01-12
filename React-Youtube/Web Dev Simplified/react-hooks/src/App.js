@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
-
-function countInitial() {
-  console.log('run function');
-  return 4;
-}
+import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [count, setCount] = useState(() => countInitial());
-  const decrementCount = () => {
-    setCount((prevCount) => prevCount - 1);
-  };
-  const incrementCount = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
+  const [resourceType, setResourceType] = useState('posts');
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
+      .then((response) => response.json())
+      .then((json) => setItems(json));
+  }, [resourceType]);
+  // we want to run useEffect if our resourceType changes
   return (
     <>
-      <button onClick={decrementCount}>-</button>
-      <span>{count}</span>
-      <button onClick={incrementCount}>+</button>
+      <div>
+        <button onClick={() => setResourceType('posts')}>Posts</button>
+        <button onClick={() => setResourceType('users')}>Users</button>
+        <button onClick={() => setResourceType('comments')}>Comments</button>
+      </div>
+      <h1>{resourceType}</h1>
+      {items.map((item) => {
+        return <pre>{JSON.stringify(item)}</pre>;
+      })}
     </>
   );
 }
