@@ -1,6 +1,6 @@
 import React from 'react';
 import Tour from './Tour';
-const Tours = ({ tours }) => {
+const Tours = ({ tours, removeTour }) => {
   return (
     <section className='title'>
       <h2>Tours</h2>
@@ -8,7 +8,7 @@ const Tours = ({ tours }) => {
       <div>
         {tours.map((tour) => {
           // using spread operator to get all properties from api
-          return <Tour key={tour.id} {...tour} />;
+          return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
         })}
       </div>
     </section>
