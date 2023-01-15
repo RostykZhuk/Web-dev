@@ -36,7 +36,9 @@ const Review = () => {
     <article className='review'>
       <div className='img-container'>
         <img src={image} alt={name} className='person-img' />
-        <FaChevronRight />
+        <div className='quote-icon'>
+          <FaQuoteRight />
+        </div>
       </div>
       <h4 className='author'>{name}</h4>
       <p className='job'>{job}</p>
