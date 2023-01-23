@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutor/5-useRef/setup/1-useRef-basics';
+import Setup from './tutor/6-useReducer/setup';
 function App() {
   return (
     <div className='container'>
