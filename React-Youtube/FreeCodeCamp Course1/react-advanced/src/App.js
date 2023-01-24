@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutor/6-useReducer/setup';
+import Setup from './tutor/7-prop-drilling/setup/1-prop-drilling';
 function App() {
   return (
     <div className='container'>
