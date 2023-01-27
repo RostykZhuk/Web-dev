@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutor/10-prop-types/setup';
+import Setup from './tutor/11-react-router/setup';
 function App() {
   return (
     <div className='container'>
