@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import UseState from './UseState';
 import UseEffect from './UseEffect';
+import UseMemo from './UseMemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UseEffect />
+    <UseMemo />
   </React.StrictMode>
 );
 
