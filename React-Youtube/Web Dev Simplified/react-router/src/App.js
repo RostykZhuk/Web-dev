@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import BookList from './pages/BookList';
+import Book from './pages/Book';
 import Home from './pages/Home';
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/books' element={<BookList />} />
+        <Route path='/books/:id' element={<Book />} />
       </Routes>
     </>
   );
