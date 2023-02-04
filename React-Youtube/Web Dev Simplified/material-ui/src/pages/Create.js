@@ -2,14 +2,30 @@ import React from 'react';
 import { Typography } from '@mui/material';
 import { Button } from '@mui/material';
 import { Container } from '@mui/material';
-import { AcUnitOutlined } from '@mui/icons-material';
-import SendIcon from '@mui/icons-material/Send';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+  btn: {
+    fontSize: 60,
+    backgroundColor: 'violet',
+    '&:hover': {
+      background: 'blue',
+    },
+  },
+  title: {
+    textDecoration: 'underline',
+    marginBottom: 20,
+  },
+});
 
 export default function Create() {
+  const classes = useStyles();
+
   return (
-    <Container>
+    <Container size='sm'>
       <Typography
+        className={classes.title}
         variant='h6'
         color='textSecondary'
         component='h2'
@@ -19,24 +35,15 @@ export default function Create() {
       </Typography>
 
       <Button
-        onClick={() => console.log('You clicked me')}
+        className={classes.btn}
+        onClick={() => console.log('you clicked me')}
         type='submit'
         color='secondary'
         variant='contained'
-        startIcon={<SendIcon />}
         endIcon={<KeyboardArrowRightIcon />}
       >
         Submit
       </Button>
-
-      {/* icons */}
-      {/* <br />
-      <AcUnitOutlined />
-      <AcUnitOutlined color='secondary' fontSize='large' />
-      <AcUnitOutlined color='secondary' fontSize='small' />
-      <AcUnitOutlined color='action' fontSize='small' />
-      <AcUnitOutlined color='error' fontSize='small' />
-      <AcUnitOutlined color='disabled' fontSize='small' /> */}
     </Container>
   );
 }
