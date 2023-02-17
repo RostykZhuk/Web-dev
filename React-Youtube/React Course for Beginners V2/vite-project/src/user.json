@@ -1,0 +1,11 @@
+{
+  "name": "Rostyk",
+  "hobbies": ["Reading", "Skiing", "Investing"],
+  "workingExpirience": [0.5, "Frontend developer"],
+  "skills": {
+    "html": 4,
+    "css": 4,
+    "js": 4.5
+  },
+  "email": "fake@email.com"
+}
