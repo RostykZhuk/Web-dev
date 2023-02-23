@@ -6,7 +6,7 @@ function App() {
       <main
         onClick={(e) => {
           console.log('main');
-          console.log(e.target.value);
+          console.log(e.target);
         }}
         // onClickCapture={(e) => {
         //   // e.stopPropagation();
