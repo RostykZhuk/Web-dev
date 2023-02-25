@@ -1,20 +1,33 @@
 import { useState } from 'react';
 import './App.css';
 
-function App() {
-  const [data, setData] = useState({ isConfirmed: false });
-
-  const toggle = () => {
-    setData({ isConfirmed: true });
-    console.log(data);
-  };
+function ComponentWithInnerState({ counter }) {
+  console.log('counter', counter);
+  const [state, setState] = useState(counter);
 
   return (
-    <main>
-      <h1>Functional Component</h1>
-      <p>{data.isConfirmed === true ? 'true' : 'false'}</p>
-      <button onClick={toggle}>Toggle</button>
-    </main>
+    <>
+      <h2>Inner Counter: {state}</h2>
+
+      <div>
+        <button onClick={() => setState(state + 1)}>Increment</button>
+      </div>
+    </>
+  );
+}
+
+function App() {
+  const [state, setState] = useState(0);
+
+  return (
+    <>
+      <h1>App Counter: {state}</h1>
+
+      <div>
+        <button onClick={() => setState(state + 1)}>Increment</button>
+      </div>
+      <ComponentWithInnerState counter={state} />
+    </>
   );
 }
 
