@@ -11,6 +11,7 @@ function Navbar() {
         <h3>redux toolkit</h3>
         <div className='nav-container'>
           <CartIcon />
+
           <div className='amount-container'>
             <p className='total-amount'>{amount}</p>
           </div>
