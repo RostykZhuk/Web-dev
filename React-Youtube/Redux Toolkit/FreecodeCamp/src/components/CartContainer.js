@@ -1,4 +1,4 @@
-import CartItem from './CartItem';
+import CartItems from './CartItems';
 import { useSelector } from 'react-redux';
 
 const CartContainer = () => {
@@ -20,7 +20,7 @@ const CartContainer = () => {
       </header>
       <div>
         {cartItems.map((item) => {
-          return <CartItem key={item.id} {...item} />;
+          return <CartItems key={item.id} {...item} />;
         })}
       </div>
       <footer>
