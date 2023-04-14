@@ -2,11 +2,11 @@
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'ejs');
+
 // Basic Routing
 app.get('/', (req, res) => {
-  console.log('Here');
-  //   res.json({ message: 'Error' });
-  res.download('server.js');
+  res.render('index', { text2342: 'World' });
 });
 
 app.listen(3000);
