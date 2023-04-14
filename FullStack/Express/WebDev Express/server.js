@@ -9,4 +9,8 @@ app.get('/', (req, res) => {
   res.render('index', { text2342: 'World' });
 });
 
+const useRouter = require('./routes/users');
+
+app.use('/users', useRouter);
+
 app.listen(3000);
