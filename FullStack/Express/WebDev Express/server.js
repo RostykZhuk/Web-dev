@@ -13,4 +13,9 @@ const useRouter = require('./routes/users');
 
 app.use('/users', useRouter);
 
+function logger(req, res, next) {
+  console.log(req.originalUrl);
+  next();
+}
+
 app.listen(3000);
