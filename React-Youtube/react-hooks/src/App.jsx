@@ -1,7 +1,13 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import './App.css';
 function App() {
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState([]);
+  const age = 22;
+  const value = useMemo(() => ({
+    info,
+    age,
+  }));
+
   return (
     <div className='App'>
       js version
