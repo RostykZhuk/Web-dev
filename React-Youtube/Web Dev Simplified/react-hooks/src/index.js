@@ -5,10 +5,12 @@ import UseEffect from './UseEffect';
 import UseMemo from './UseMemo';
 import UseRef from './UseRef';
 import UseContext from './useContext/UseContext';
+import UseReducer from './useReducer/UseReducer';
+import Advanced from './useReducer/Advanced';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UseContext />
+    <Advanced />
   </React.StrictMode>
 );
 
