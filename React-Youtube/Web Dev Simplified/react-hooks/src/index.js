@@ -7,10 +7,11 @@ import UseRef from './UseRef';
 import UseContext from './useContext/UseContext';
 import UseReducer from './useReducer/UseReducer';
 import Advanced from './useReducer/Advanced';
+import UseCallback from './useCallback/UseCallback';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Advanced />
+    <UseCallback />
   </React.StrictMode>
 );
 
